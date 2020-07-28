@@ -1,22 +1,22 @@
 import React from 'react';
 import Logo from '../../assets/images/logo.png';
-import './Menu.css';
-import Button from '../Button';
-//import ButtonLink from './components/ButtonLink';
 
+import Button from '../Button';
+import { MenuBase, LogoBase } from './styles';
 import { Link } from 'react-router-dom';
+
+import './styles.css';
 
 function Menu() {
     return (
-        <nav className="Menu">
+        <MenuBase>
             <Link to="/">
-                <img className="Logo" src={Logo} alt="phlix logo"/>
+                <LogoBase src={Logo}/>
             </Link>
-
-            <Button as={Link} className="ButtonLink" to="cadastro/video">
+            <Button as={Link} to="cadastro/video">
                 Novo Video
             </Button>
-        </nav>
+        </MenuBase>
     );
 }
 
