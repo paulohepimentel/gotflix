@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Houses from './components/Houses';
 import Logo from '../../assets/images/logo_alura.png';
-
 import LogoGit from '../../assets/images/github.svg';
 import LogoIn from '../../assets/images/linkedin.svg';
-
-import Houses from './components/Houses'
 
 export const FooterBase = styled.footer`
   background: var(--dark);
@@ -43,7 +41,7 @@ export const FooterBase = styled.footer`
 function Footer() {
   return (
     <FooterBase>
-      <Houses/>
+      <Houses />
       <p>
         Created by PH during
         {' '}
@@ -56,12 +54,12 @@ function Footer() {
       <ul>
         <li>
           <a href="https://github.com/paulohepimentel">
-            <img src={LogoGit} alt="Logo GitHub"/>
+            <img src={LogoGit} alt="Logo GitHub" />
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/paulohepimentel/">
-            <img src={LogoIn} alt="Logo LinkedIn"/>
+            <img src={LogoIn} alt="Logo LinkedIn" />
           </a>
         </li>
       </ul>

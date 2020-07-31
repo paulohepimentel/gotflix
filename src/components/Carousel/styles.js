@@ -5,16 +5,17 @@ export const Title = styled.h3`
   font-weight: normal;
   font-size: 25px;
   line-height: 1;
+  margin-top: 15px;
   margin-bottom: 10px;
   display: inline-block;
-  padding: 20px 40px;
+  padding: 10px 20px;
   background: red;
   line-height: 1;
   border-radius: 4px;
 
   @media (max-width: 800px) {
     font-size: 15px;
-    padding: 10px 20px;
+    padding: 5px 10px;
   }
 `;
 
