@@ -11,7 +11,17 @@ function Home() {
       <BannerMain 
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área"}
+        videoDescription={
+          "Game of Thrones is based roughly on the storylines of A Song of Ice and Fire by George R. R. Martin, set in the fictional Seven Kingdoms of Westeros and the continent of Essos. The series utilizes several simultaneous plot lines."
+        }
+      />
+
+      <Carousel
+        category={dadosIniciais.categorias[1]}
+      />
+
+      <Carousel
+        category={dadosIniciais.categorias[2]}
       />
 
       <Carousel
@@ -20,23 +30,11 @@ function Home() {
       />
 
       <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[1]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
         category={dadosIniciais.categorias[3]}
       />
 
       <Carousel
-        ignoreFirstVideo
         category={dadosIniciais.categorias[4]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[5]}
       />
 
     </PageDefault>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/logo_gotflix.png';
 
 import Button from '../Button';
 import { MenuBase, LogoBase } from './styles';

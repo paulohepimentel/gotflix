@@ -24,8 +24,8 @@ export const MenuBase = styled.nav`
     padding-left: 5%;
     padding-right: 5%;
 
-    background: var(--darkblue);
-    border-bottom: 3px solid var(--primary);
+    background: var(--dark);
+    border-bottom: 2px solid var(--primary);
 
     @media (max-width: 800px) {
         height: 60px;
