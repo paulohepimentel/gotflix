@@ -14,7 +14,7 @@ function Menu() {
                 <LogoBase src={Logo}/>
             </Link>
             <Button as={Link} to="cadastro/video">
-                Novo Video
+                New Video
             </Button>
         </MenuBase>
     );

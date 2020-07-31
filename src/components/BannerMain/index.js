@@ -36,7 +36,7 @@ export default function BannerMain({
             youtubeID={youTubeID}
           />
           <WatchButton>
-            Assistir
+            Watch now
           </WatchButton>
         </ContentAreaContainer.Item>
       </ContentAreaContainer>
