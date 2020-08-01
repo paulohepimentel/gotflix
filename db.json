@@ -2,27 +2,27 @@
   "categories": [
     {
       "id": 1,
-      "title": "Best Songs",
+      "name": "Best Songs",
       "color": "#ff7400"
     },
     {
       "id": 2,
-      "title": "Epic Moments",
+      "name": "Epic Moments",
       "color": "#ff0000"
     },
     {
       "id": 3,
-      "title": "Some Characters",
+      "name": "Some Characters",
       "color": "#ff4d00"
     },
     {
       "id": 4,
-      "title": "House Themes",
+      "name": "House Themes",
       "color": "#ff9a00"
     },
     {
       "id": 5,
-      "title": "Season Trailers",
+      "name": "Season Trailers",
       "color": "#ffc100"
     }
   ],
