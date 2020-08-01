@@ -5,15 +5,15 @@ import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
 
 function Carousel({ ignoreFirstVideo, category}) {
-  const categoryTitle = category.title;
+  const categoryName = category.name;
   const categoryColor = category.color;
   const videos = category.videos;
   return (
     <VideoCardGroupContainer>
-      {categoryTitle && (
+      {categoryName && (
         <>
           <Title style={{ backgroundColor: categoryColor || 'red' }}>
-            {categoryTitle}
+            {categoryName}
           </Title>
         </>
       )}

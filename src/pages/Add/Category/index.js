@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 export const Input = styled.input`
     background: var(--dark);
@@ -11,32 +12,19 @@ export const Input = styled.input`
 `;
 
 function AddCategory() {
-  const newCategory = {
+  const defaultCategory = {
     name: '',
-    description: '',
     color: '#ff0000',
   };
+
+  const { values, handleChange, clearForm } = useForm(defaultCategory);
+
   const [categories, setCategories] = useState([]);
-  const [values, setValues] = useState(newCategory);
-
-  function setValue(key, value) {
-    setValues({
-      ...values,
-      [key]: value,
-    });
-  }
-
-  function handleChange(event) {
-    setValue(
-      event.target.getAttribute('name'),
-      event.target.value,
-    );
-  }
 
   useEffect(() => {
-    const url = 'https://gotflix-server.herokuapp.com/categories';
+    const URL = 'https://gotflix-server.herokuapp.com/categories';
     if (window.location.href.includes('localhost')) {
-      fetch(url).then(async (serverResponse) => {
+      fetch(URL).then(async (serverResponse) => {
         if (serverResponse.ok) {
           const response = await serverResponse.json();
           setCategories([
@@ -63,7 +51,7 @@ function AddCategory() {
           ...categories, values,
         ]);
 
-        setValues(newCategory);
+        clearForm();
       }}
       >
 
@@ -72,14 +60,6 @@ function AddCategory() {
           type="text"
           name="name"
           value={values.name}
-          onChange={handleChange}
-        />
-
-        <FormField
-          label="Descrição"
-          type="textarea"
-          name="description"
-          value={values.description}
           onChange={handleChange}
         />
 

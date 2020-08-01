@@ -1,40 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageDefault from '../../components/PageDefault';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 
-import data from '../../database/db.json';
+import categoriesRepository from '../../repositories/categories';
+
+// import data from '../../database/db.json';
 
 function Home() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    categoriesRepository.getAllWithVideos()
+      .then((categoriesWithVideos) => {
+        setData(categoriesWithVideos);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
   return (
     <PageDefault>
-      <BannerMain
-        videoTitle={data.categories[0].videos[0].title}
-        url={data.categories[0].videos[0].url}
-        videoDescription="Game of Thrones is based roughly on the storylines of A Song of Ice and Fire by George R. R. Martin, set in the fictional Seven Kingdoms of Westeros and the continent of Essos. The series utilizes several simultaneous plot lines."
-      />
 
-      <Carousel
-        category={data.categories[1]}
-      />
+      {data.length === 0 && (<div>Loading...</div>)}
 
-      <Carousel
-        category={data.categories[2]}
-      />
+      {data.map((category, index) => {
+        if (index === 0) {
+          return (
+            <div key={category.id}>
+              <BannerMain
+                videoTitle={data[3].videos[0].title}
+                url={data[3].videos[0].url}
+              />
+              <Carousel
+                category={data[0]}
+              />
+            </div>
+          );
+        }
 
-      <Carousel
-        ignoreFirstVideo
-        category={data.categories[0]}
-      />
-
-      <Carousel
-        category={data.categories[3]}
-      />
-
-      <Carousel
-        category={data.categories[4]}
-      />
-
+        return (
+          <Carousel
+            key={category.id}
+            category={category}
+          />
+        );
+      })}
     </PageDefault>
   );
 }
