@@ -34,7 +34,7 @@ function AddCategory() {
   }
 
   useEffect(() => {
-    const url = 'http://localhost:8080/categories';
+    const url = 'https://gotflix-server.herokuapp.com/categories';
     if (window.location.href.includes('localhost')) {
       fetch(url).then(async (serverResponse) => {
         if (serverResponse.ok) {

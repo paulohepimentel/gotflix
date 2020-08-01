@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-    color: var(--white);
+    color: var(--dark);
     border: 0px solid var(--primary);
     background: var(--primary);
     box-sizing: border-box;
@@ -30,8 +30,7 @@ const Button = styled.button`
 
     &:hover,
     &:focus {
-        border: #af0000;
-        background: #af0000;
+        color: var(--white);
     }
 `;
 

@@ -2,9 +2,590 @@
   "categories": [
     {
       "id": 1,
-      "name": "Testando o local server",
-      "description": "Testando a lib",
+      "title": "Best Songs",
+      "color": "#ff7400"
+    },
+    {
+      "id": 2,
+      "title": "Epic Moments",
       "color": "#ff0000"
+    },
+    {
+      "id": 3,
+      "title": "Some Characters",
+      "color": "#ff4d00"
+    },
+    {
+      "id": 4,
+      "title": "House Themes",
+      "color": "#ff9a00"
+    },
+    {
+      "id": 5,
+      "title": "Season Trailers",
+      "color": "#ffc100"
+    }
+  ],
+  "videos" : [
+    {
+      "id": 1,
+      "categoryId" : 1,
+      "title": "Official Opening Credits",
+      "url": "https://www.youtube.com/watch?v=TZE9gVF1QbA"
+    },
+    {
+      "id": 2,
+      "categoryId" : 1,
+      "title": "The North Remembers",
+      "url": "https://www.youtube.com/watch?v=tnBX__PKdeM"
+    },
+    {
+      "id": 3,
+      "categoryId" : 1,
+      "title": "A Lannister Always Pays His Debts",
+      "url": "https://www.youtube.com/watch?v=jERdloSRJEw"
+    },
+    {
+      "id": 4,
+      "categoryId" : 1,
+      "title": "Blood of My Blood",
+      "url": "https://www.youtube.com/watch?v=oN711viMMe8"
+    },
+    {
+      "id": 5,
+      "categoryId" : 1,
+      "title": "Winter Is Here",
+      "url": "https://www.youtube.com/watch?v=nmMaZXAahCs"
+    },
+    {
+      "id": 6,
+      "categoryId" : 1,
+      "title": "The Night King",
+      "url": "https://www.youtube.com/watch?v=k1frgt0D_f4"
+    },
+    {
+      "id": 7,
+      "categoryId" : 1,
+      "title": "Dance Of Dragons",
+      "url": "https://www.youtube.com/watch?v=S9e_INLnJts"
+    },
+    {
+      "id": 8,
+      "categoryId" : 1,
+      "title": "Truth",
+      "url": "https://www.youtube.com/watch?v=2Jh5tvlzwls"
+    },
+    {
+      "id": 9,
+      "categoryId" : 1,
+      "title": "What Is Dead May Never Die",
+      "url": "https://www.youtube.com/watch?v=niQoEPGvtHk"
+    },
+    {
+      "id": 10,
+      "categoryId" : 1,
+      "title": " The King's Arrival",
+      "url": "https://www.youtube.com/watch?v=AWBZDYiqXKE"
+    },
+    {
+      "id": 11,
+      "categoryId" : 1,
+      "title": "Light of the Seven",
+      "url": "https://www.youtube.com/watch?v=KkwK7xfu8yw"
+    },
+    {
+      "id": 12,
+      "categoryId" : 1,
+      "title": "The Iron Throne",
+      "url": "https://www.youtube.com/watch?v=F8Cn8shOG7I"
+    },
+    {
+      "id": 13,
+      "categoryId" : 1,
+      "title": "The Winds of Winter",
+      "url": "https://www.youtube.com/watch?v=j34Xa6DGi4s"
+    },
+    {
+      "id": 14,
+      "categoryId" : 1,
+      "title": "Dragonstone",
+      "url": "https://www.youtube.com/watch?v=vomq7hPTVng"
+    },
+    {
+      "id": 15,
+      "categoryId" : 1,
+      "title": "The Last of the Starks",
+      "url": "https://www.youtube.com/watch?v=Izj3IsXi6Gs"
+    },
+    {
+      "id": 16,
+      "categoryId" : 1,
+      "title": "Dracarys",
+      "url": "https://www.youtube.com/watch?v=OfmoyTL64R0"
+    },
+    {
+      "id": 17,
+      "categoryId" : 1,
+      "title": "The Tower",
+      "url": "https://www.youtube.com/watch?v=RX2y3ncQGR4"
+    },
+
+
+    {
+      "id": 18,
+      "categoryId" : 2,
+      "title": "The Red Wedding",
+      "url": "https://www.youtube.com/watch?v=f68ZSBLPMCk"
+    },
+    {
+      "id": 19,
+      "categoryId" : 2,
+      "title": "Daenerys Destroys The Iron Fleet & The Golden Company",
+      "url": "https://www.youtube.com/watch?v=mXf65gRDUt8"
+    },
+    {
+      "id": 20,
+      "categoryId" : 2,
+      "title": "Arya Stark kills Walder Frey's family",
+      "url": "https://www.youtube.com/watch?v=LKUpFhY1Vdo"
+    },
+    {
+      "id": 21,
+      "categoryId" : 2,
+      "title": "Daenerys Burns Kraznys & Frees the Unsullied",
+      "url": "https://www.youtube.com/watch?v=vfM1ufWKZ-I"
+    },
+    {
+      "id": 22,
+      "categoryId" : 2,
+      "title": "Brienne vs the Hound",
+      "url": "https://www.youtube.com/watch?v=K2P2ByOtOOs"
+    },
+    {
+      "id": 23,
+      "categoryId" : 2,
+      "title": "Tyrion's Trial",
+      "url": "https://www.youtube.com/watch?v=e4Uq8O5ZhUA"
+    },
+    {
+      "id": 24,
+      "categoryId" : 2,
+      "title": "Littlefinger is Executed",
+      "url": "https://www.youtube.com/watch?v=H4E-8yOGWeo"
+    },
+    {
+      "id": 25,
+      "categoryId" : 2,
+      "title": "The Battle of the Bastards",
+      "url": "https://www.youtube.com/watch?v=O-O8Er94TJI"
+    },
+    {
+      "id": 26,
+      "categoryId" : 2,
+      "title": "Hardhome",
+      "url": "https://www.youtube.com/watch?v=O7S9DMGYRAI"
+    },
+    {
+      "id": 27,
+      "categoryId" : 2,
+      "title": "Cersei Blows up the Sept",
+      "url": "https://www.youtube.com/watch?v=_KbvDvc-WFE"
+    },
+    {
+      "id": 28,
+      "categoryId" : 2,
+      "title": "Daenerys Destroys the Lannister Troops",
+      "url": "https://www.youtube.com/watch?v=VvtVK3GxoO4"
+    },
+    {
+      "id": 29,
+      "categoryId" : 2,
+      "title": "Arya Kills the Night King",
+      "url": "https://www.youtube.com/watch?v=xKvGVfSiO6c"
+    },
+    {
+      "id": 30,
+      "categoryId" : 2,
+      "title": "Euron Captures Yara",
+      "url": "https://www.youtube.com/watch?v=i3S0ecAda8Q"
+    },
+    {
+      "id": 31,
+      "categoryId" : 2,
+      "title": "Oberyn Martell vs the Mountain",
+      "url": "https://www.youtube.com/watch?v=PBIyOYbzvxs"
+    },
+    {
+      "id": 32,
+      "categoryId" : 2,
+      "title": "Ned Setark's Beheading",
+      "url": "https://www.youtube.com/watch?v=PW6wfXPeJTw"
+    },
+    {
+      "id": 33,
+      "categoryId" : 2,
+      "title": "Jon Kills Daenerys",
+      "url": "https://www.youtube.com/watch?v=6WTWQ21Naok"
+    },
+    {
+      "id": 34,
+      "categoryId" : 2,
+      "title": "Joffrey's Death",
+      "url": "https://www.youtube.com/watch?v=MbMFLDb3CbI"
+    },
+    {
+      "id": 35,
+      "categoryId" : 2,
+      "title": "Jon Snow's Death & Resurrection",
+      "url": "https://www.youtube.com/watch?v=HTtajNNGTIA"
+    },
+    {
+      "id": 36,
+      "categoryId" : 2,
+      "title": "The Battle of Blackwater",
+      "url": "https://www.youtube.com/watch?v=bxKzT7AzK1c"
+    },
+    {
+      "id": 37,
+      "categoryId" : 2,
+      "title": "Hold the Door",
+      "url": "https://www.youtube.com/watch?v=Poy6h2zJCJ0"
+    },
+    {
+      "id": 38,
+      "categoryId" : 2,
+      "title": "Daenerys Saves the Expediction Beyond the Wall",
+      "url": "https://www.youtube.com/watch?v=Uc3R-pRds7Q"
+    },
+    {
+      "id": 39,
+      "categoryId" : 2,
+      "title": "The Tower of Joy",
+      "url": "https://www.youtube.com/watch?v=Y3IwIB7yfO8"
+    },
+    {
+      "id": 40,
+      "categoryId" : 2,
+      "title": "Jaime & Brienne's Bath",
+      "url": "https://www.youtube.com/watch?v=BOpQqVCt-Jc"
+    },
+    {
+      "id": 41,
+      "categoryId" : 2,
+      "title": "The White Walkers Break the Wall",
+      "url": "https://www.youtube.com/watch?v=tT06cMR05fI"
+    },
+    {
+      "id": 42,
+      "categoryId" : 2,
+      "title": "The Birth of Dragons",
+      "url": "https://www.youtube.com/watch?v=7nwlOKOBDMw"
+    },
+    {
+      "id": 43,
+      "categoryId" : 2,
+      "title": "Jaime Lannister Pushes Bran Stark Out of The Window",
+      "url": "https://www.youtube.com/watch?v=fC0RN2641Sw"
+    },
+
+
+    {
+      "id": 44,
+      "categoryId" : 3,
+      "title": "Sansa Stark | Little Bird",
+      "url": "https://www.youtube.com/watch?v=PcowvZ2C0qs"
+    },
+    {
+      "id": 45,
+      "categoryId" : 3,
+      "title": "Margaery Tyrell | The Queen",
+      "url": "https://www.youtube.com/watch?v=bA-SJ15qLnY"
+    },
+    {
+      "id": 46,
+      "categoryId" : 3,
+      "title": "Ned Stark | A Man of Honor",
+      "url": "https://www.youtube.com/watch?v=pvXPYhK_LiI"
+    },
+    {
+      "id": 47,
+      "categoryId" : 3,
+      "title": "Ramsay Bolton | Omen",
+      "url": "https://www.youtube.com/watch?v=9yBn1p3U59k"
+    },
+    {
+      "id": 48,
+      "categoryId" : 3,
+      "title": "Brienne Of Tarth | Vow",
+      "url": "https://www.youtube.com/watch?v=45At1w__jfE"
+    },
+    {
+      "id": 49,
+      "categoryId" : 3,
+      "title": "Arya Stark | Not Today",
+      "url": "https://www.youtube.com/watch?v=DdKAQ1UTwVU"
+    },
+    {
+      "id": 50,
+      "categoryId" : 3,
+      "title": "Joffrey Baratheon | The Mad King",
+      "url": "https://www.youtube.com/watch?v=95zoHRDpebE"
+    },
+    {
+      "id": 51,
+      "categoryId" : 3,
+      "title": "Cersei Lannister | The Queen Of The Seven Kingdoms",
+      "url": "https://www.youtube.com/watch?v=GHBrHl7iM8w"
+    },
+    {
+      "id": 52,
+      "categoryId" : 3,
+      "title": "Tyrion Lannister | Hand of The Queen",
+      "url": "https://www.youtube.com/watch?v=J1TL-EQWtvo"
+    },
+    {
+      "id": 53,
+      "categoryId" : 3,
+      "title": "Jon Snow | The Targaryen Wolf",
+      "url": "https://www.youtube.com/watch?v=uuDu43Gnyts"
+    },
+    {
+      "id": 54,
+      "categoryId" : 3,
+      "title": "Daenerys Targaryen | The Queen",
+      "url": "https://www.youtube.com/watch?v=7I4LUKNwlyY"
+    },
+    {
+      "id": 55,
+      "categoryId" : 3,
+      "title": "Stannis Baratheon | Duty",
+      "url": "https://www.youtube.com/watch?v=YcFwa5CTPyg"
+    },
+    {
+      "id": 56,
+      "categoryId" : 3,
+      "title": "Catelyn Stark | Fierceness",
+      "url": "https://www.youtube.com/watch?v=qr7Optwn9Xo"
+    },
+    {
+      "id": 57,
+      "categoryId" : 3,
+      "title": "Melisandre | A Champion Of Light And Life",
+      "url": "https://www.youtube.com/watch?v=5nuaKHaE0A8"
+    },
+    {
+      "id": 58,
+      "categoryId" : 3,
+      "title": "Jaime Lannister | Oathbreaker",
+      "url": "https://www.youtube.com/watch?v=R1fsTYP-N0s"
+    },
+    {
+      "id": 59,
+      "categoryId" : 3,
+      "title": "Jorah Mormont | To Serve You",
+      "url": "https://www.youtube.com/watch?v=k3hCPYCZGGM"
+    },
+    {
+      "id": 60,
+      "categoryId" : 3,
+      "title": "Theon Greyjoy | Home",
+      "url": "https://www.youtube.com/watch?v=gOO_JKJDubg"
+    },
+    {
+      "id": 61,
+      "categoryId" : 3,
+      "title": "Robb Stark | The Young Wolf",
+      "url": "https://www.youtube.com/watch?v=i_RTT7xfFvA"
+    },
+    {
+      "id": 62,
+      "categoryId" : 3,
+      "title": "Bran Stark | Drowning",
+      "url": "https://www.youtube.com/watch?v=Q8avC4H7GpI"
+    },
+    {
+      "id": 63,
+      "categoryId" : 3,
+      "title": "Petyr Baelish | A Little Game",
+      "url": "https://www.youtube.com/watch?v=KidSygx7qxE"
+    },
+    {
+      "id": 64,
+      "categoryId" : 3,
+      "title": "Varys | The Spider",
+      "url": "https://www.youtube.com/watch?v=PNIxQK6TbTg"
+    },
+    {
+      "id": 65,
+      "categoryId" : 3,
+      "title": "Tywin Lannister | Dynasty",
+      "url": "https://www.youtube.com/watch?v=vO0VWaJjOSk"
+    },
+    {
+      "id": 66,
+      "categoryId" : 3,
+      "title": "Grey Worm | Always Unsullied",
+      "url": "https://www.youtube.com/watch?v=b_rGvXPA1xM"
+    },
+    {
+      "id": 67,
+      "categoryId" : 3,
+      "title": "Davos Seaworth | The Onion Knight",
+      "url": "https://www.youtube.com/watch?v=r9CGfRWzL3s"
+    },
+    {
+      "id": 68,
+      "categoryId" : 3,
+      "title": "Oberyn Martell | The Red Viper",
+      "url": "https://www.youtube.com/watch?v=V4jhifbdU6c"
+    },
+    {
+      "id": 69,
+      "categoryId" : 3,
+      "title": "Sandor Clegane | A Real Warrior",
+      "url": "https://www.youtube.com/watch?v=B8dgoUa05H8"
+    },
+    {
+      "id": 70,
+      "categoryId" : 3,
+      "title": "Olenna Tyrell | The Queen of Thorns",
+      "url": "https://www.youtube.com/watch?v=J5VV2qQO4lo"
+    },
+    {
+      "id": 71,
+      "categoryId" : 3,
+      "title": "The Dragons | They're My Children",
+      "url": "https://www.youtube.com/watch?v=fTg78JnrbPs"
+    },
+    {
+      "id": 72,
+      "categoryId" : 3,
+      "title": "Missandei of Naath | Loyalty",
+      "url": "https://www.youtube.com/watch?v=kgCkkIGDed8"
+    },
+    {
+      "id": 73,
+      "categoryId" : 3,
+      "title": "Beric Dondarrion | A Purpose",
+      "url": "https://www.youtube.com/watch?v=vpfsp44Bxfg"
+    },
+
+
+    {
+      "id": 74,
+      "categoryId" : 4,
+      "title": "House Stark",
+      "url": "https://www.youtube.com/watch?v=o4FHIZNvhPo"
+    },
+    {
+      "id": 75,
+      "categoryId" : 4,
+      "title": "House Lannister",
+      "url": "https://www.youtube.com/watch?v=rcgBNyy2Pls"
+    },
+    {
+      "id": 76,
+      "categoryId" : 4,
+      "title": "House Baratheon",
+      "url": "https://www.youtube.com/watch?v=mP6uip1Lmfc"
+    },
+    {
+      "id": 77,
+      "categoryId" : 4,
+      "title": "House Targaryen",
+      "url": "https://www.youtube.com/watch?v=D6EDrPC3oeA"
+    },
+    {
+      "id": 78,
+      "categoryId" : 4,
+      "title": "House Tyrell",
+      "url": "https://www.youtube.com/watch?v=S2LGGeA8CcM"
+    },
+    {
+      "id": 79,
+      "categoryId" : 4,
+      "title": "House Tully",
+      "url": "https://www.youtube.com/watch?v=33BpR8rjrp0"
+    },
+    {
+      "id": 80,
+      "categoryId" : 4,
+      "title": "House Arryn",
+      "url": "https://www.youtube.com/watch?v=mARvkXa4jLs"
+    },
+    {
+      "id": 81,
+      "categoryId" : 4,
+      "title": "House Bolton",
+      "url": "https://www.youtube.com/watch?v=LoDqZeqt-RU"
+    },
+    {
+      "id": 82,
+      "categoryId" : 4,
+      "title": "House Martell",
+      "url": "https://www.youtube.com/watch?v=JnvKsE3viPc"
+    },
+    {
+      "id": 83,
+      "categoryId" : 4,
+      "title": "House Greyjoy",
+      "url": "https://www.youtube.com/watch?v=SwYuEXrSOVU"
+    },
+    {
+      "id": 84,
+      "categoryId" : 4,
+      "title": "House Baelish",
+      "url": "https://www.youtube.com/watch?v=p3AuawbnJ_E"
+    },
+
+
+    {
+      "id": 85,
+      "categoryId" : 5,
+      "title": "Season 1 | Feard and Blood",
+      "url": "https://www.youtube.com/watch?v=BpJYNVhGf1s"
+    },
+    {
+      "id": 86,
+      "categoryId" : 5,
+      "title": "Season 2 | Price For Our Sins",
+      "url": "https://www.youtube.com/watch?v=Dv0UBTfnqdI"
+    },
+    {
+      "id": 87,
+      "categoryId" : 5,
+      "title": "Season 3 | The Beast",
+      "url": "https://www.youtube.com/watch?v=wfSXhMzWoA4"
+    },
+    {
+      "id": 88,
+      "categoryId" : 5,
+      "title": "Season 4 | The War is Not Won",
+      "url": "https://www.youtube.com/watch?v=xZY43QSx3Fk"
+    },
+    {
+      "id": 89,
+      "categoryId" : 5,
+      "title": "Season 5 | The Wheel",
+      "url": "https://www.youtube.com/watch?v=F9Bo89m2f6g"
+    },
+    {
+      "id": 90,
+      "categoryId" : 5,
+      "title": "Season 6 | The Real War is Between the Living and The Dead",
+      "url": "https://www.youtube.com/watch?v=EI0ib1NErqg"
+    },
+    {
+      "id": 91,
+      "categoryId" : 5,
+      "title": "Season 7 | The Great War is Here",
+      "url": "https://www.youtube.com/watch?v=giYeaKsXnsI"
+    },
+    {
+      "id": 92,
+      "categoryId" : 5,
+      "title": "Season 8 | The Final ",
+      "url": "https://www.youtube.com/watch?v=rlR4PJn8b8I"
     }
   ]
 }

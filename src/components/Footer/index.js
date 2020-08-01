@@ -27,6 +27,14 @@ export const FooterBase = styled.footer`
     padding: 0;
     margin: 10px;
   }
+  
+  a img:hover,
+  a img:focus {
+    border: #ffffff;
+    border-radius: 5.5px;
+    background: #ffffff;
+  }
+
   img{
     max-width: 25px;
     @media (max-width: 800px) {
