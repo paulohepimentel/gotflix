@@ -3,7 +3,7 @@ import PageDefault from '../../components/PageDefault';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 
-import data from '../../data/dados_iniciais.json';
+import data from '../../database/db.json';
 
 function Home() {
   return (

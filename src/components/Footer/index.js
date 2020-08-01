@@ -28,15 +28,19 @@ export const FooterBase = styled.footer`
     margin: 10px;
   }
   img{
-    max-width: 32px;
+    max-width: 25px;
     @media (max-width: 800px) {
-      max-width: 32px;
+      max-width: 20px;
     }
   }
   @media (max-width: 800px) {
     margin-bottom: 50px;
   }
 `;
+
+const aluraLogo = {
+  borderRadius: '4px',
+};
 
 function Footer() {
   return (
@@ -45,10 +49,8 @@ function Footer() {
       <p>
         Created by PH during
         {' '}
-        <a href="https://www.alura.com.br/">
-          <img src={Logo} alt="Logo Alura" />
-        </a>
-        {'\'s React Immersion'}
+        <strong>Alura</strong>
+        {'\'s React JS Immersion'}
       </p>
 
       <ul>
@@ -60,6 +62,11 @@ function Footer() {
         <li>
           <a href="https://www.linkedin.com/in/paulohepimentel/">
             <img src={LogoIn} alt="Logo LinkedIn" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.alura.com.br/">
+            <img src={Logo} alt="Logo Alura" style={aluraLogo} />
           </a>
         </li>
       </ul>

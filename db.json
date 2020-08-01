@@ -1,0 +1,10 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Testando o local server",
+      "description": "Testando a lib",
+      "color": "#ff0000"
+    }
+  ]
+}

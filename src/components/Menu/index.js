@@ -13,8 +13,8 @@ function Menu() {
       <Link to="/">
         <LogoBase src={Logo} />
       </Link>
-      <Button as={Link} to="cadastro/video">
-        New Video
+      <Button as={Link} to="add/video">
+        Add Video
       </Button>
     </MenuBase>
   );

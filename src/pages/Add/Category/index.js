@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 export const Input = styled.input`
     background: var(--dark);
     color: var(--white);
 `;
 
-function CadastroCategoria() {
+function AddCategory() {
   const newCategory = {
     name: '',
     description: '',
@@ -31,6 +32,22 @@ function CadastroCategoria() {
       event.target.value,
     );
   }
+
+  useEffect(() => {
+    const url = 'http://localhost:8080/categories';
+    if (window.location.href.includes('localhost')) {
+      fetch(url).then(async (serverResponse) => {
+        if (serverResponse.ok) {
+          const response = await serverResponse.json();
+          setCategories([
+            ...response,
+          ]);
+          return;
+        }
+        throw new Error('Error');
+      });
+    }
+  }, []);
 
   return (
     <PageDefault>
@@ -60,7 +77,7 @@ function CadastroCategoria() {
 
         <FormField
           label="Descrição"
-          type="text"
+          type="textarea"
           name="description"
           value={values.description}
           onChange={handleChange}
@@ -74,12 +91,20 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <button>Cadastrar</button>
+        <Button>
+          Cadastrar
+        </Button>
       </form>
 
+      {categories.length === 0 && (
+        <div>
+          Loading...
+        </div>
+      )}
+
       <ul>
-        {categories.map((category, index) => (
-          <li key={`${category}${index}`}>
+        {categories.map((category) => (
+          <li key={`${category.name}`}>
             {category.name}
           </li>
         ))}
@@ -92,4 +117,4 @@ function CadastroCategoria() {
   );
 }
 
-export default CadastroCategoria;
+export default AddCategory;
