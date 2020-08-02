@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Houses from './components/Houses';
 import Logo from '../../assets/images/logo_alura.png';
-import LogoGit from '../../assets/images/github.svg';
-import LogoIn from '../../assets/images/linkedin.svg';
+import LogoGit from '../../assets/images/github.png';
+import LogoIn from '../../assets/images/linkedin.png';
 
 export const FooterBase = styled.footer`
   background: var(--dark);
@@ -11,7 +11,7 @@ export const FooterBase = styled.footer`
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 15px;
   color: var(--white);
   text-align: center;
   ul {
@@ -27,11 +27,9 @@ export const FooterBase = styled.footer`
     padding: 0;
     margin: 10px;
   }
-  
+
   a img:hover,
   a img:focus {
-    border: #ffffff;
-    border-radius: 5.5px;
     background: #ffffff;
   }
 
@@ -46,16 +44,16 @@ export const FooterBase = styled.footer`
   }
 `;
 
-const aluraLogo = {
-  borderRadius: '4px',
-};
-
 function Footer() {
   return (
     <FooterBase>
       <Houses />
       <p>
-        Created by PH during
+        Created by
+        {' '}
+        <strong>PH</strong>
+        {' '}
+        during
         {' '}
         <strong>Alura</strong>
         {'\'s React JS Immersion'}
@@ -74,7 +72,7 @@ function Footer() {
         </li>
         <li>
           <a href="https://www.alura.com.br/">
-            <img src={Logo} alt="Logo Alura" style={aluraLogo} />
+            <img src={Logo} alt="Logo Alura" />
           </a>
         </li>
       </ul>
