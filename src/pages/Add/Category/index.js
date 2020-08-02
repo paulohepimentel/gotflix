@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
-import FormField from '../../../components/FormField';
+import Field from '../../../components/Form/Field';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
 
@@ -38,7 +38,7 @@ function AddCategory() {
   }, []);
 
   return (
-    <PageDefault>
+    <PageDefault to="/add/video" textButton="Add Video">
       <h1>
         Cadastro de Categoria:
         {' '}
@@ -55,7 +55,7 @@ function AddCategory() {
       }}
       >
 
-        <FormField
+        <Field
           label="Nome da Categoria"
           type="text"
           name="name"
@@ -63,7 +63,7 @@ function AddCategory() {
           onChange={handleChange}
         />
 
-        <FormField
+        <Field
           label="Cor"
           type="color"
           name="color"

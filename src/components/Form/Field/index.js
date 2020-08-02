@@ -14,11 +14,11 @@ const FormFieldWrapper = styled.div`
 
 const Label = styled.label``;
 Label.Text = styled.span`
-  color: #E5E5E5;
-  height: 57px;
+  color: var(--white);
+  height: 50px;
   position: absolute; 
-  top: 0;
-  left: 16px;
+  top: 1px;
+  left: 12px;
   
   display: flex;
   align-items: center;
@@ -32,27 +32,25 @@ Label.Text = styled.span`
 `;
 
 const Input = styled.input`
-  background: #53585D;
-  color: #F5F5F5;
+  padding-top: 10px;
+  padding-left: 12px;
+  background: var(--dark);
+  color: var(--white);
   display: block;
-  width: 45%;
+  width: 100%;
   height: 50px;
   font-size: 18px;
-  
   outline: 0;
   border: 0;
   border-top: 4px solid transparent;
   border-bottom: 4px solid #53585D;
-  
-  padding: 16px 16px;
-  margin-bottom: 45px;
   
   resize: none;
   border-radius: 4px;
   transition: border-color .3s;
   
   &:focus {
-    border-bottom-color: var(--primary);
+    border-bottom-color: #0dc143;
   }
   &:focus:not([type='color']) + ${Label.Text} {
     transform: scale(.6) translateY(-10px);
@@ -67,7 +65,7 @@ const Input = styled.input`
   }}
 `;
 
-function FormField({
+function Field({
   label, type, name, value, onChange, suggestions,
 }) {
   const fieldId = `id_${name}`;
@@ -114,14 +112,14 @@ function FormField({
   );
 }
 
-FormField.defaultProps = {
+Field.defaultProps = {
   type: 'text',
   value: '',
   onChange: () => {},
   suggestions: [],
 };
 
-FormField.propTypes = {
+Field.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -130,4 +128,4 @@ FormField.propTypes = {
   suggestions: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default FormField;
+export default Field;

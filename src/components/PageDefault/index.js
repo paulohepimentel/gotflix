@@ -9,12 +9,12 @@ const Main = styled.main`
     flex: 1;
 `;
 
-function PageDefault(props) {
+function PageDefault({ children, textButton, to }) {
   return (
     <>
-      <Menu />
+      <Menu textButton={textButton} to={to} />
       <Main>
-        {props.children}
+        {children}
       </Main>
       <Footer />
     </>

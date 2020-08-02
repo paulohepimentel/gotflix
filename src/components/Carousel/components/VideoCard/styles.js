@@ -8,7 +8,7 @@ export const VideoCardContainer = styled.a`
   cursor: pointer;
   color: white;
   flex: 0 0 298px;
-  width: 290px;
+  width: 291.5px;
   height: 153px;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
@@ -29,7 +29,7 @@ export const VideoCardContainer = styled.a`
     margin-left: 20px;
   }
   @media (max-width: 800px) {
-    width: 170px;
-    height: 90px;
+    width: 150px;
+    height: 85px;
   }
 `;

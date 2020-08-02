@@ -21,7 +21,7 @@ function Home() {
   }, []);
 
   return (
-    <PageDefault>
+    <PageDefault to="/add/video" textButton="Add Video">
 
       {data.length === 0 && (<div>Loading...</div>)}
 

@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
+import RowFlex from '../../../components/RowFlex';
+import Field from '../../../components/Form/Field';
 import PageDefault from '../../../components/PageDefault';
-import FormField from '../../../components/FormField';
+import FormWrapper from '../../../components/Form/Wrapper';
+
 import useForm from '../../../hooks/useForm';
-import Button from '../../../components/Button';
+
 import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categories';
+import FormButton from '../../../components/Form/FormButton';
 
-function CadastroVideo() {
+function AddNewVideo() {
   const history = useHistory();
   const [categories, setCategories] = useState([]);
   const categoryNames = categories.map(({ name }) => name);
@@ -26,59 +31,68 @@ function CadastroVideo() {
   }, []);
 
   return (
-    <PageDefault>
-      <h1>Cadastro de Video</h1>
+    <PageDefault to="/add/category" textButton="Add Category">
+      <FormWrapper formTitle="New Video">
+        <form onSubmit={(event) => {
+          event.preventDefault();
+          // eslint-disable-next-line no-alert
+          // alert('Video Cadastrado com sucesso');
+          const categoryId = categories.find((category) => category.name === values.category);
+          videosRepository.create({
+            title: values.title,
+            url: values.url,
+            categoryId,
+          })
+            .then(() => {
+              history.push('/');
+            });
+        }}
+        >
+          <Field
+            label="Video Title"
+            type="text"
+            name="title"
+            value={values.title}
+            onChange={handleChange}
+          />
 
-      <form onSubmit={(event) => {
-        event.preventDefault();
-        // eslint-disable-next-line no-alert
-        // alert('Video Cadastrado com sucesso');
-        const categoryId = categories.find((category) => category.name === values.category);
-        videosRepository.create({
-          title: values.title,
-          url: values.url,
-          categoryId,
-        })
-          .then(() => {
-            history.push('/');
-          });
-      }}
-      >
-        <FormField
-          label="Titulo do Video"
-          type="text"
-          name="title"
-          value={values.title}
-          onChange={handleChange}
-        />
+          <Field
+            label="Video Category"
+            type="text"
+            name="categoryId"
+            value={values.categoryId}
+            onChange={handleChange}
+            suggestions={categoryNames}
+          />
 
-        <FormField
-          label="URL do Video"
-          type="text"
-          name="url"
-          value={values.url}
-          onChange={handleChange}
-        />
+          <Field
+            label="Video URL"
+            type="text"
+            name="url"
+            value={values.url}
+            onChange={handleChange}
+          />
 
-        <FormField
-          label="Categoria do Video"
-          type="text"
-          name="categoryId"
-          value={values.categoryId}
-          onChange={handleChange}
-          suggestions={categoryNames}
-        />
+          <RowFlex>
+            <FormButton
+              style={{ background: '#6c757d' }}
+              to="/"
+            >
+              Cancel
+            </FormButton>
 
-        <Button type="submit">
-          Cadastrar
-        </Button>
-      </form>
+            <FormButton
+              style={{ background: '#0dc143' }}
+              type="submit"
+            >
+              Add Video
+            </FormButton>
 
-      <Link to="/add/category">
-        Cadastrar Categoria
-      </Link>
+          </RowFlex>
+        </form>
+      </FormWrapper>
     </PageDefault>
   );
 }
 
-export default CadastroVideo;
+export default AddNewVideo;
