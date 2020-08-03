@@ -13,17 +13,22 @@
     {
       "id": 3,
       "name": "House Themes",
-      "color": "#ff9a00"
+      "color": "#ff7400"
     },
     {
       "id": 4,
       "name": "Best Songs",
-      "color": "#ff7400"
+      "color": "#ff9a00"
     },
     {
       "id": 5,
       "name": "Seasons Trailers",
       "color": "#ffc100"
+    },
+    {
+      "id": 6,
+      "name": "Quotes",
+      "color": "#cca500"
     }
   ],
   "videos": [
@@ -586,44 +591,64 @@
       "id": 95
     },
     {
-      "title": "",
-      "url": "",
+      "categoryId": 6,
+      "title": "You win or you die",
+      "url": "https://www.youtube.com/watch?v=ucB4UrhI-3w",
       "id": 96
     },
     {
-      "title": "",
-      "url": "",
+      "title": "Not today",
+      "url": "https://www.youtube.com/watch?v=myZ29u1gpWQ",
+      "categoryId": 6,
       "id": 97
     },
     {
-      "title": "",
-      "url": "",
+      "title": "I am yours and you are mine",
+      "url": "https://www.youtube.com/watch?v=Yc5vcD0CB0o",
+      "categoryId": 6,
       "id": 98
     },
     {
-      "title": "",
-      "url": "",
+      "title": "The night is dark and full of terrors",
+      "url": "https://www.youtube.com/watch?v=IEOsJEZTBn0",
+      "categoryId": 6,
       "id": 99
     },
     {
-      "title": "626222",
-      "url": "6226262662",
+      "title": "Hold the door",
+      "url": "https://www.youtube.com/watch?v=5DoBY8M_bCg",
+      "categoryId": 6,
       "id": 100
     },
     {
-      "title": "",
-      "url": "",
+      "title": "Valar Morghulis",
+      "url": "https://www.youtube.com/watch?v=cBhGn3uVotk",
+      "categoryId": 6,
       "id": 101
     },
     {
-      "title": "",
-      "url": "",
+      "title": "A Lannister always pays his debts",
+      "url": "https://www.youtube.com/watch?v=VUg2Q4A13Ss",
+      "categoryId": 6,
       "id": 102
     },
     {
-      "title": "",
-      "url": "",
+      "title": "You know nothing",
+      "url": "https://www.youtube.com/watch?v=Lde4qgB3zYY",
+      "categoryId": 6,
       "id": 103
+    },
+    {
+      "title": "I am the king",
+      "url": "https://www.youtube.com/watch?v=sgYpGBGDsuE",
+      "categoryId": 6,
+      "id": 104
+    },
+    {
+      "title": "Winter is coming",
+      "url": "https://www.youtube.com/watch?v=E9wAk6BNIYI",
+      "categoryId": 6,
+      "id": 105
     }
   ]
 }

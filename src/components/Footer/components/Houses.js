@@ -16,6 +16,12 @@ export const HousesLogo = styled.div`
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 30px;
+  
+  @media (max-width: 800px) {
+    img {
+      max-width: 5px;
+    }
+  }
 `;
 
 function Houses() {

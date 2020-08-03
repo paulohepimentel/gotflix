@@ -4,11 +4,12 @@ import styled, { css } from 'styled-components';
 
 const FormFieldWrapper = styled.div`
   position: relative;
+  
   textarea {
     min-height: 150px;
   }
   input[type="color"] {
-    padding-left: 56px;
+    padding: 12px 12px 5px 140px;
   }
 `;
 
@@ -32,6 +33,7 @@ Label.Text = styled.span`
 `;
 
 const Input = styled.input`
+  margin-bottom: 40px;
   padding-top: 10px;
   padding-left: 12px;
   background: var(--dark);
@@ -85,6 +87,7 @@ function Field({
           type={type}
           value={value}
           name={name}
+          required
           hasValue={hasValue}
           onChange={onChange}
           autoComplete={hasSuggestions ? 'off' : 'on'}

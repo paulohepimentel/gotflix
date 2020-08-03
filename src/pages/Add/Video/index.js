@@ -5,12 +5,12 @@ import RowFlex from '../../../components/RowFlex';
 import Field from '../../../components/Form/Field';
 import PageDefault from '../../../components/PageDefault';
 import FormWrapper from '../../../components/Form/Wrapper';
+import FormButton from '../../../components/Form/FormButton';
 
 import useForm from '../../../hooks/useForm';
 
 import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categories';
-import FormButton from '../../../components/Form/FormButton';
 
 function AddNewVideo() {
   const history = useHistory();
@@ -19,7 +19,7 @@ function AddNewVideo() {
   const { handleChange, values } = useForm({
     title: '',
     url: '',
-    category: '',
+    categoryId: '',
   });
 
   useEffect(() => {
@@ -37,11 +37,12 @@ function AddNewVideo() {
           event.preventDefault();
           // eslint-disable-next-line no-alert
           // alert('Video Cadastrado com sucesso');
-          const categoryId = categories.find((category) => category.name === values.category);
+          const chosenCategory = categories.find((category) => category.name === values.categoryId);
+
           videosRepository.create({
             title: values.title,
             url: values.url,
-            categoryId,
+            categoryId: chosenCategory.id,
           })
             .then(() => {
               history.push('/');
@@ -87,8 +88,8 @@ function AddNewVideo() {
             >
               Add Video
             </FormButton>
-
           </RowFlex>
+
         </form>
       </FormWrapper>
     </PageDefault>

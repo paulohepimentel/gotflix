@@ -5,7 +5,7 @@ import Button from '../Button';
 import { MenuBase, LogoBase } from './styles';
 import './styles.css';
 
-function Menu({ textButton, to}) {
+function Menu({ textButton, to }) {
   return (
     <MenuBase>
       <Link to="/">

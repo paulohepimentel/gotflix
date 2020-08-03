@@ -1,80 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import PageDefault from '../../../components/PageDefault';
+import { useHistory } from 'react-router-dom';
+
+import Label from '../../../components/Label';
+import RowFlex from '../../../components/RowFlex';
 import Field from '../../../components/Form/Field';
-import Button from '../../../components/Button';
+import PageDefault from '../../../components/PageDefault';
+import FormWrapper from '../../../components/Form/Wrapper';
+import FormButton from '../../../components/Form/FormButton';
+
 import useForm from '../../../hooks/useForm';
 
-export const Input = styled.input`
-    background: var(--dark);
-    color: var(--white);
-`;
+import categoriesRepository from '../../../repositories/categories';
+import List from './styles';
 
-function AddCategory() {
-  const defaultCategory = {
+function AddNewCategory() {
+  const history = useHistory();
+  const [categories, setCategories] = useState([]);
+  const { values, handleChange } = useForm({
     name: '',
     color: '#ff0000',
-  };
-
-  const { values, handleChange, clearForm } = useForm(defaultCategory);
-
-  const [categories, setCategories] = useState([]);
+  });
 
   useEffect(() => {
-    const URL = 'https://gotflix-server.herokuapp.com/categories';
-    if (window.location.href.includes('localhost')) {
-      fetch(URL).then(async (serverResponse) => {
-        if (serverResponse.ok) {
-          const response = await serverResponse.json();
-          setCategories([
-            ...response,
-          ]);
-          return;
-        }
-        throw new Error('Error');
+    categoriesRepository
+      .getAll()
+      .then((categoriesFromServer) => {
+        setCategories(categoriesFromServer);
       });
-    }
   }, []);
 
   return (
     <PageDefault to="/add/video" textButton="Add Video">
-      <h1>
-        Cadastro de Categoria:
-        {' '}
-        {values.name}
-      </h1>
-
-      <form onSubmit={function handlerSubmit(event) {
-        event.preventDefault();
-        setCategories([
-          ...categories, values,
-        ]);
-
-        clearForm();
-      }}
-      >
-
-        <Field
-          label="Nome da Categoria"
-          type="text"
-          name="name"
-          value={values.name}
-          onChange={handleChange}
-        />
-
-        <Field
-          label="Cor"
-          type="color"
-          name="color"
-          value={values.color}
-          onChange={handleChange}
-        />
-
-        <Button>
-          Cadastrar
-        </Button>
-      </form>
 
       {categories.length === 0 && (
         <div>
@@ -82,19 +38,68 @@ function AddCategory() {
         </div>
       )}
 
-      <ul>
+      <FormWrapper formTitle="New Category">
+        <form onSubmit={(event) => {
+          event.preventDefault();
+          if (values.name.length > 0) {
+            categoriesRepository.create({
+              name: values.name,
+              color: values.color,
+            })
+              .then(() => {
+                history.push('/add/video');
+              });
+          }
+        }}
+        >
+
+          <Field
+            label="Category Name"
+            type="text"
+            name="name"
+            value={values.name}
+            onChange={handleChange}
+          />
+
+          <Field
+            label="Category Color"
+            type="color"
+            name="color"
+            value={values.color}
+            onChange={handleChange}
+          />
+
+          <RowFlex>
+            <FormButton
+              style={{ background: '#6c757d' }}
+              to="/"
+            >
+              Cancel
+            </FormButton>
+
+            <FormButton
+              style={{ background: '#0dc143' }}
+              type="submit"
+            >
+              Add Category
+            </FormButton>
+          </RowFlex>
+        </form>
+      </FormWrapper>
+
+      <List>
         {categories.map((category) => (
           <li key={`${category.name}`}>
-            {category.name}
+            <Label
+              text={category.name}
+              color={category.color}
+            />
           </li>
         ))}
-      </ul>
+      </List>
 
-      <Link to="/">
-        Voltar para a Home
-      </Link>
     </PageDefault>
   );
 }
 
-export default AddCategory;
+export default AddNewCategory;

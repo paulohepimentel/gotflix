@@ -3,17 +3,10 @@ import styled from 'styled-components';
 
 const FormWrapper = styled.div`
   width: 100%;
-  height: 80vh;
-
-  padding: 50px;
-  padding-bottom: 0px;
-
+  padding: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
-  
-  background: var(--black);
 
   form{
     height: 100%;
@@ -21,13 +14,15 @@ const FormWrapper = styled.div`
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
   }
 `;
 
 const FormTitle = styled.h1`
-  margin: 0px auto;
+  margin: 20px auto;
   color: var(--white);
+  @media (max-width: 800px) {
+    font-size: 25px;
+  }
 `;
 
 function Wrapper({ formTitle, children }) {
