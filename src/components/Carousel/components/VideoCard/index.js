@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { VideoCardContainer } from './styles';
+import VideoCardContainer from './styles';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -18,8 +18,9 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       href={videoURL}
       target="_blank"
       style={{ borderColor: categoryColor || 'red' }}
-      title={videoTitle}
-    />
+    >
+      <span style={{ background: categoryColor || 'white' }}>{videoTitle}</span>
+    </VideoCardContainer>
   );
 }
 

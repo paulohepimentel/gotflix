@@ -18,6 +18,7 @@ export default function BannerMain({ videoTitle, url }) {
   return (
     <BannerMainContainer backgroundImage={bgUrl}>
       <ContentAreaContainer>
+
         <ContentAreaContainer.Item>
           <ContentAreaContainer.Title>
             {videoTitle}
@@ -32,6 +33,7 @@ export default function BannerMain({ videoTitle, url }) {
             Watch now
           </WatchButton>
         </ContentAreaContainer.Item>
+
       </ContentAreaContainer>
     </BannerMainContainer>
   );

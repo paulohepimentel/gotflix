@@ -6,7 +6,7 @@ export const Title = styled.h3`
   font-size: 25px;
   line-height: 1;
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: inline-block;
   padding: 10px 20px;
   background: red;
@@ -26,7 +26,6 @@ export const VideoCardList = styled.ul`
   display: flex;
   overflow-x: auto;
   flex-direction: row;
-  
   li {
     margin-right: 16px;
   }
@@ -35,7 +34,7 @@ export const VideoCardList = styled.ul`
 export const VideoCardGroupContainer = styled.section`
   color: white;
   min-height: 197px;
-  margin-left: 5%;
+  margin-left: 6%;
   margin-right: 5%;
   margin-bottom: 16px;
   @media (max-width: 800px) {

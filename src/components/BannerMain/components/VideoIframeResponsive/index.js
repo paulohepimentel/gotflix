@@ -1,8 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+// import ReactPlayer from 'react-player';
 
 import { VideoContainer, ResponsiveIframe } from './styles';
 
+/*
+<ReactPlayer
+        url="https://www.youtube.com/embed/${youtubeID}"
+      />
+*/
 function YouTubeIframeResponsive({ youtubeID }) {
   return (
     <VideoContainer>

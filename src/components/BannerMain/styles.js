@@ -5,6 +5,7 @@ export const ContentAreaContainer = styled.section`
   margin-right: 5%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -45,10 +46,10 @@ ContentAreaContainer.Category = styled.h1`
   }
 `;
 
-ContentAreaContainer.Title = styled.h2`
+ContentAreaContainer.Title = styled.h3`
   font-style: normal;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;

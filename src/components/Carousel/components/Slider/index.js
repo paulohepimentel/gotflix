@@ -22,10 +22,10 @@ const Container = styled.ul`
     }
 
     .slick-prev {
-        left: 0;
+        left: 5px;
     }
     .slick-next {
-        right: 16px;
+        right: 5px;
     }
 `;
 
@@ -45,7 +45,7 @@ const Slider = ({ children }) => (
         ...
         {
           dots: false,
-          infinite: false,
+          infinite: true,
           speed: 300,
           centerMode: false,
           variableWidth: true,
