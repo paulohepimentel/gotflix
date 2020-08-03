@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const VideoCardContainer = styled.a`
+const VideoCardContainer = styled.button`
   width: 290px;
   height: 153px;
   border: 1px solid;
@@ -10,7 +10,9 @@ const VideoCardContainer = styled.a`
   opacity: 0.75;
   overflow: hidden;
   text-decoration: none;
-  overflow: hidden;
+  outline: 0;
+  user-select: none;
+  box-shadow: none;
   color: white;
   cursor: pointer;
   position: relative;
@@ -21,6 +23,8 @@ const VideoCardContainer = styled.a`
   transition: all 0.3s;
   &:hover,
   &:focus {
+    outline: none;
+    user-select: none;
     background-size: cover;
     border: 0px;
     opacity: 1;
@@ -30,6 +34,11 @@ const VideoCardContainer = styled.a`
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    @media (max-width: 800px) {
+      & > span {
+        display: none;
+      }
     }
   }
 
@@ -45,7 +54,6 @@ const VideoCardContainer = styled.a`
     padding: 5px;
     font-weight: 500;
     display: none;
-    
   }
 
   @media (max-width: 800px) {

@@ -25,6 +25,7 @@ export const VideoCardList = styled.ul`
   list-style: none;
   display: flex;
   overflow-x: auto;
+  scroll-behavior: smooth;
   flex-direction: row;
   li {
     margin-right: 16px;

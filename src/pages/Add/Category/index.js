@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import Label from '../../../components/Label';
 import RowFlex from '../../../components/RowFlex';
-import Field from '../../../components/Form/Field';
+import Field from '../../../components/Form/components/Field';
 import PageDefault from '../../../components/PageDefault';
-import FormWrapper from '../../../components/Form/Wrapper';
-import FormButton from '../../../components/Form/FormButton';
+import FormWrapper from '../../../components/Form/components/Wrapper';
+import FormButton from '../../../components/Form/components/FormButton';
 
 import useForm from '../../../hooks/useForm';
 
 import categoriesRepository from '../../../repositories/categories';
 import List from './styles';
+import Loading from '../../../components/Loading';
 
 function AddNewCategory() {
   const history = useHistory();
@@ -33,9 +34,7 @@ function AddNewCategory() {
     <PageDefault to="/add/video" textButton="Add Video">
 
       {categories.length === 0 && (
-        <div>
-          Loading...
-        </div>
+        <Loading />
       )}
 
       <FormWrapper formTitle="New Category">
@@ -71,6 +70,7 @@ function AddNewCategory() {
 
           <RowFlex>
             <FormButton
+              as={Link}
               style={{ background: '#6c757d' }}
               to="/"
             >

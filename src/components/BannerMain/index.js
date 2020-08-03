@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
+import Background from '../../assets/images/background.png';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -11,18 +12,19 @@ function getYouTubeId(youtubeURL) {
     );
 }
 
-export default function BannerMain({ videoTitle, url }) {
+export default function BannerMain({ url, description }) {
   const youTubeID = getYouTubeId(url);
-  const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
 
   return (
-    <BannerMainContainer backgroundImage={bgUrl}>
+    <BannerMainContainer backgroundImage={Background}>
       <ContentAreaContainer>
-
         <ContentAreaContainer.Item>
           <ContentAreaContainer.Title>
-            {videoTitle}
+            Game of Thrones
           </ContentAreaContainer.Title>
+          <ContentAreaContainer.Description>
+            {description}
+          </ContentAreaContainer.Description>
         </ContentAreaContainer.Item>
 
         <ContentAreaContainer.Item>
@@ -33,13 +35,12 @@ export default function BannerMain({ videoTitle, url }) {
             Watch now
           </WatchButton>
         </ContentAreaContainer.Item>
-
       </ContentAreaContainer>
     </BannerMainContainer>
   );
 }
 
 BannerMain.propTypes = {
-  videoTitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };

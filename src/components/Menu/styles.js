@@ -8,11 +8,9 @@ export const LogoBase = styled.img`
 `;
 
 export const MenuBase = styled.nav`
-
     width: 100%;
     height: 94px;
     z-index: 100;
-
     display: flex;
     justify-content: space-between;
     align-items: center;

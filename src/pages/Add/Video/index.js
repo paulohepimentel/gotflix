@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import RowFlex from '../../../components/RowFlex';
-import Field from '../../../components/Form/Field';
+import Field from '../../../components/Form/components/Field';
 import PageDefault from '../../../components/PageDefault';
-import FormWrapper from '../../../components/Form/Wrapper';
-import FormButton from '../../../components/Form/FormButton';
+import FormWrapper from '../../../components/Form/components/Wrapper';
+import FormButton from '../../../components/Form/components/FormButton';
 
 import useForm from '../../../hooks/useForm';
 
@@ -38,15 +38,16 @@ function AddNewVideo() {
           // eslint-disable-next-line no-alert
           // alert('Video Cadastrado com sucesso');
           const chosenCategory = categories.find((category) => category.name === values.categoryId);
-
-          videosRepository.create({
-            title: values.title,
-            url: values.url,
-            categoryId: chosenCategory.id,
-          })
-            .then(() => {
-              history.push('/');
-            });
+          if (values.title.length > 0 && values.url.length > 0 && values.categoryId.length > 0) {
+            videosRepository.create({
+              title: values.title,
+              url: values.url,
+              categoryId: chosenCategory.id,
+            })
+              .then(() => {
+                history.push('/');
+              });
+          }
         }}
         >
           <Field
@@ -76,6 +77,7 @@ function AddNewVideo() {
 
           <RowFlex>
             <FormButton
+              as={Link}
               style={{ background: '#6c757d' }}
               to="/"
             >

@@ -4,7 +4,7 @@ import { VideoCardGroupContainer, Title } from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
 
-function Carousel({ ignoreFirstVideo, category}) {
+function Carousel({ ignoreFirstVideo, category, getURL, topVideo}) {
   const categoryName = category.name;
   const categoryColor = category.color;
   const videos = category.videos;

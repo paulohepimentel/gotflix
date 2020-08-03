@@ -4,8 +4,10 @@ export const ContentAreaContainer = styled.section`
   margin-left: 5%;
   margin-right: 5%;
   height: 100%;
+
+  padding:20px;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -16,55 +18,40 @@ export const ContentAreaContainer = styled.section`
   }
 `;
 
-ContentAreaContainer.Item = styled.div`
-  width: 50%;
-  display: inline-block;
-  margin-bottom: 50px;
-  @media (max-width: 800px) {
-    width: 100%;
-  }
-`;
-
-ContentAreaContainer.Category = styled.h1`
-  font-family: Ubuntu;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 70px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  display: inline-block; 
-  padding: 25px;
-  line-height: 1;
-  border-radius: 4px;
-
+ContentAreaContainer.Description = styled.p`
+  text-align: justify;
+  padding-right: 25px;
   @media (max-width: 800px) {
     display: none;
-    font-size: 18px;
-    padding: 10px;
   }
 `;
 
-ContentAreaContainer.Title = styled.h3`
+ContentAreaContainer.Title = styled.h2`
   font-style: normal;
-  font-weight: 300;
-  font-size: 25px;
+  font-weight: 400;
+  font-size: 40px;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;
-
   @media (max-width: 800px) {
     font-size: 32px;
     text-align: center;
   }
 `;
 
+ContentAreaContainer.Item = styled.div`
+  width: 70%;
+  display: inline-block;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+`;
+
 export const BannerMainContainer = styled.section`
-  height: 90vh;
+  height: 85vh;
   position: relative;
   color: #fff;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
+  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
   background-position: center;
   @media (max-width: 800px) {
@@ -86,12 +73,12 @@ export const BannerMainContainer = styled.section`
   &:before {
     top: 0;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.75);
   }
 
   &:after {
     bottom: 0;
-    background: linear-gradient(0deg, #141414 0%, transparent 100%);
+    background: linear-gradient(0deg, #000000 0%, transparent 100%);
   }
 `;
 
