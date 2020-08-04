@@ -18,7 +18,11 @@ function VideoCard({
   return (
     <VideoCardContainer
       url={image}
+      href={videoURL}
       target="_blank"
+      onClick={() => {
+        window.scroll(0, 0);
+      }}
       style={{ borderColor: categoryColor || 'red' }}
     >
       <span style={{ background: categoryColor || 'white' }}>{videoTitle}</span>

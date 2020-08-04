@@ -71,7 +71,7 @@ export const ErrorBanner = styled.section`
 
 function Pagina404() {
   return (
-    <PageDefault>
+    <PageDefault to="/add/video" textButton="Add Video">
       <ErrorBanner backgroundImage={Background}>
         <ErrorContainer>
           <ErrorContainer.Title>

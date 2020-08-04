@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const VideoCardContainer = styled.button`
+const VideoCardContainer = styled.a`
   width: 290px;
   height: 153px;
   border: 1px solid;
