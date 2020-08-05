@@ -17,7 +17,7 @@
 </p>
 
 ## ✦ Deploy
-Link para acesso ao Front-end: https://gotflix.vercel.app/
+Link para acesso: https://gotflix.vercel.app/
 
 ## ✦ Projeto
 <p align="justify">
