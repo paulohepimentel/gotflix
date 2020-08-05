@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Logo" title="GotFlix" src="src/assets/images/logo_gotflix.png" width="360px" />
+    <img alt="logo" title="GotFlix" src="src/assets/images/logo_gotflix.png" width="360px" />
 </h1>
 
 <p align="center">
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-    <img alt="Telas" title="site" src="src/assets/images/site.png" width="100%"/>
+    <img alt="telas" title="site" src="src/assets/images/site.png" width="100%"/>
 </p>
 
 ## ✦ Deploy
